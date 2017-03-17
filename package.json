@@ -4,8 +4,22 @@
   "description": "budget",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "lite": "lite-server",
+      "start": "concurrent \"npm run lite\""
   },
   "author": "ssharma",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+      "angular": "*",
+      "angular-route": "*",
+      "angular-animate": "*",
+      "angular-aria": "*",
+      "angular-messages": "*",
+      "angular-material": "*",
+      "material-design-icons": "*"
+
+  },
+  "devDependencies": {
+    "lite-server": "*"
+  }
 }

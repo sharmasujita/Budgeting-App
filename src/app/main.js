@@ -1,0 +1,1 @@
+angular.module("budget-app", ["ngMaterial","ngMessages"]);
