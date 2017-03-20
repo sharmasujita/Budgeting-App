@@ -4,22 +4,29 @@
   "description": "budget",
   "main": "index.js",
   "scripts": {
-      "lite": "lite-server",
-      "start": "concurrent \"npm run lite\""
+    "lite": "lite-server",
+    "start": "concurrent \"npm run lite\""
   },
   "author": "ssharma",
   "license": "ISC",
   "dependencies": {
-      "angular": "*",
-      "angular-route": "*",
-      "angular-animate": "*",
-      "angular-aria": "*",
-      "angular-messages": "*",
-      "angular-material": "*",
-      "material-design-icons": "*"
-
+    "angular": "*",
+    "angular-route": "*",
+    "angular-animate": "*",
+    "angular-aria": "*",
+    "angular-messages": "*",
+    "angular-material": "*",
+    "material-design-icons": "*"
   },
   "devDependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-eslint": "*",
+    "gulp-ng-annotate": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-todo": "^5.3.0",
+    "gulp-uglify": "^2.1.1",
+    "gulp-util": "^3.0.8",
     "lite-server": "*"
   }
 }

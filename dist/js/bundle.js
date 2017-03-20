@@ -1,0 +1,2 @@
+function BudgetFormController(){this.income=0}function HeaderController(){this.title="My Budget App"}angular.module("budget-app",["ngMaterial","ngMessages"]),angular.module("budget-app").component("budgetForm",{templateUrl:"./src/app/components/budget_form/budget_form.template.html",controller:BudgetFormController}),angular.module("budget-app").component("headerNav",{templateUrl:"./src/app/layout/header/header.template.html",controller:HeaderController});
+//# sourceMappingURL=bundle.js.map

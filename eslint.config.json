@@ -1,0 +1,22 @@
+{
+    "ecmaFeatures": {},
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "camelcase": 1,
+        "quotes": 1,
+        "no-trailing-spaces": 1,
+        "eol-last": 0,
+        "no-unused-vars": 1,
+        "no-underscore-dangle": 1,
+        "no-alert": 1,
+        "no-lone-blocks": 1,
+        "no-const-assign": 1,
+        "prefer-const": 0,
+        "no-magic-numbers": 1
+    },
+    "globals": {
+
+    }
+}
