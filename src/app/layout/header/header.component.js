@@ -1,4 +1,5 @@
-"use Strict"
+"use strict";
+
 angular
     .module("budget-app")
     .component("headerNav", {
@@ -6,7 +7,7 @@ angular
         controller: HeaderController
     });
 
-    function HeaderController() {
-        var self = this;
-        self.title = "My Budget App";
-    }
+function HeaderController() {
+    var self = this;
+    self.title = "My Budget App";
+}
