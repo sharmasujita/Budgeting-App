@@ -7,7 +7,10 @@ const gulp = require('gulp'),
     annotate = require('gulp-ng-annotate'),
     uglify = require('gulp-uglify'),
     util = require('gulp-util'),
-    todo = require('gulp-todo');
+    todo = require('gulp-todo'),
+    sass = require('gulp-sass'),
+    cleanCss = require('gulp-clean-css');
+
 
 let config = {
         paths: {
@@ -16,6 +19,7 @@ let config = {
                 'src/app/components/**/*.js',
                 'src/app/layout/**/*.js'
             ],
+            sass: 'src/assets/scss/*.scss',
             dist: 'dist'
         }
 };
@@ -38,4 +42,23 @@ gulp.task('bundleJs', function() {
         .pipe(gulp.dest(config.paths.dist + '/js'))
 });
 
-gulp.task('default',['bundleJs']);
+gulp.task('sass', function() {
+    return gulp.src(config.paths.sass)
+        .pipe(sass())
+        .pipe(concat('main.min.css'))
+        .pipe(cleanCss({ debug: true }, function(details) {
+            console.log(details.name + " " + details.stats.originalSize);
+            console.log(details.name + " " + details.stats.minifiedSize);
+        }))
+        .pipe(gulp.dest(config.paths.dist + '/css'))
+
+});
+
+gulp.task('watch' , function() {
+    gulp.watch(config.paths.js, ['bundleJs']);
+    gulp.watch(config.paths.sass, ['sass']);
+
+});
+
+gulp.task('build', ['bundleJs', 'sass'])
+gulp.task('default',['build', 'watch']);

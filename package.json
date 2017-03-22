@@ -20,9 +20,11 @@
   },
   "devDependencies": {
     "gulp": "*",
+    "gulp-clean-css": "^3.0.4",
     "gulp-concat": "*",
     "gulp-eslint": "*",
     "gulp-ng-annotate": "*",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "*",
     "gulp-todo": "^5.3.0",
     "gulp-uglify": "^2.1.1",

@@ -1,16 +1,14 @@
-<div layout="row" layout-align="center center">
-
+<section layout-align="center center" layout-padding flex class="form">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+          Budget Form  
+        </div>
+    </md-toolbar>
     <md-content layout="column" class="md-whiteframe-2dp" layout-padding>
         <md-input-container>
             <label> Income </label>
             <input type="text" ng-model="$ctrl.income"/>
         </md-input-container>
     </md-content>
-
-    <md-content class="md-whiteframe-2dp" layout-padding>
-        <md-input-container>
-            <label> Summary </label>
-            <input type="text" ng-model="$ctrl.income" disabled/>
-        </md-input-container>
-    </md-content>
-</div>
+    
+</section>
