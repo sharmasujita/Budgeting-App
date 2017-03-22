@@ -1,14 +1,65 @@
-<section layout-align="center center" layout-padding flex class="form">
+<div layout-padding flex class="form">
     <md-toolbar>
         <div class="md-toolbar-tools">
           Budget Form  
         </div>
     </md-toolbar>
     <md-content layout="column" class="md-whiteframe-2dp" layout-padding>
-        <md-input-container>
-            <label> Income </label>
-            <input type="text" ng-model="$ctrl.income"/>
-        </md-input-container>
+        <section>
+            <md-subheader class="md-primary">Income</md-subheader>
+            <div layout="row">
+                <md-input-container class="md-block" flex=70>
+                    <label> Amount: </label>
+                    <input ng-model="$ctrl.income"/>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex>
+                    <label> Recurrance: </label>
+                    <md-select ng-model="$ctrl.selectedIncomeType">
+                        <md-option ng-repeat="type in $ctrl.incomeTypes" value="{{type}}">
+                            {{type}}
+                        <md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div ng-repeat="income in $ctrl.incomes">
+                <md-input-container class="md-block" flex=70>
+                    <label> Other Amount: </label>
+                    <input ng-model="$ctrl.income"/>
+                </md-input-container>
+            </div>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.addIncome()">
+                Add Income
+            </md-button>
+        </section>
+        <section>
+            <md-subheader class="md-primary">Expenses</md-subheader>
+            <div layout="row">
+                <md-input-container class="md-block" flex>
+                    <label> Mortgage/Rent: </label>
+                    <input type="text" ng-model="$ctrl.rent"/>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex>
+                    <label> Groceries: </label>
+                    <input type="text" ng-model="$ctrl.groceries"/>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex>
+                    <label> Utilities: </label>
+                    <input type="text" ng-model="$ctrl.utilities"/>
+                </md-input-container>
+            </div>
+            <div ng-repeat="expense in $ctrl.expenses">
+                <md-input-container class="md-block" flex=70>
+                    <label> Other Expenser: </label>
+                    <input ng-model="$ctrl.expense"/>
+                </md-input-container>
+            </div>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.addExpense()">
+                Add Expenses
+            </md-button>
+        </section>
     </md-content>
     
-</section>
+</div>
