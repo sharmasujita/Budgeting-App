@@ -17,6 +17,8 @@ function BudgetFormController() {
     self.utilities = 0;
     self.expenses = [ ];
     self.incomes = [ ];
+    self.startDate = new Date();
+    selr.endDate = new Date();
 
     self.addIncome = function() {
         self.incomes.push({ });
@@ -25,4 +27,6 @@ function BudgetFormController() {
     self.addExpense = function() {
         self.expenses.push({ });
     }
+
+    
 }
